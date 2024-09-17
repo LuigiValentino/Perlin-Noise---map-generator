@@ -1,0 +1,101 @@
+body {
+    font-family: monospace;
+    text-align: center;
+    margin: 0;
+    background-color: #f4f4f4;
+    background-image: url(./sources/fondo.webp);
+}
+
+h1 {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 2.5em;
+    margin-left: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#buttonContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+#generateButton, #cameraButton {
+    background-color: #6d5a3b;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #4b3e2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+#generateButton:hover, #cameraButton:hover {
+    background-color: #5c4d35;
+}
+
+#mapCanvas {
+    border: 2px groove #4b3e2a;
+    box-shadow: rgba(0, 0, 0, 0.719) 0px 22px 70px 4px;
+    background-color: #6d5a3b;
+    max-width: 100%;
+    position: relative;
+}
+
+.map-container {
+    padding: 40px;
+}
+
+.spinner {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 8px solid #362c1e;
+    border-radius: 50%;
+    border-top: 8px solid #ffffff;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    z-index: 9999;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+hr {
+    margin: 40px 0;
+    border: 1px solid #ccc;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    color: #000000;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2em; }
+    p { font-size: 1em; }
+    #generateButton, #cameraButton { font-size: 16px; padding: 8px 16px; }
+}
